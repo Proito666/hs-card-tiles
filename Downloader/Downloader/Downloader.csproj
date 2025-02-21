@@ -62,17 +62,6 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PreBuildEvent>if exist "$(ProjectDir)..\HearthDb" (
-  echo Updating "$(ProjectDir)..\HearthDb" to origin/master
-  git -C "$(ProjectDir)..\HearthDb" fetch
-
-  git -C "$(ProjectDir)..\HearthDb" reset --hard origin/master
-
-) else (
-
-  git clone --depth 1 https://github.com/HearthSim/HearthDb.git "$(ProjectDir)..\HearthDb"
-
-)
-</PreBuildEvent>
+    
   </PropertyGroup>
 </Project>
